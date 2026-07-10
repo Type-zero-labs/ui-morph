@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laptops — NOVA · ui-morph demo</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav data-morph="nav">
+    <strong>NOVA</strong>
+    <span><a href="/index.html">HOME</a> <a href="/products.html">LAPTOPS</a></span>
+  </nav>
+
+  <header data-morph="hero">
+    <div data-morph-variant="visual">
+      <h1>The lineup.</h1>
+      <p>Three sizes. One obsession.</p>
+    </div>
+    <div data-morph-variant="technical" hidden>
+      <h1>Compare by numbers.</h1>
+      <p>Sortable specs, watt-hours and thermals for every configuration.</p>
+    </div>
+  </header>
+
+  <section data-morph="product-grid">
+    <h2>Models</h2>
+    <div class="grid">
+      <article><h3>NOVA 13</h3><p>1.1kg · 13.4″ · from $1,299</p><a class="cta" data-morph="cta-buy-13" href="#">BUY</a></article>
+      <article><h3>NOVA 15</h3><p>1.5kg · 15.6″ · from $1,699</p><a class="cta" data-morph="cta-buy-15" href="#">BUY</a></article>
+      <article><h3>NOVA 17</h3><p>2.1kg · 17.3″ · from $2,199</p><a class="cta" data-morph="cta-buy-17" href="#">BUY</a></article>
+    </div>
+  </section>
+
+  <section data-morph="comparison" hidden>
+    <h2>Side-by-side comparison</h2>
+    <table>
+      <tr><th></th><th>13</th><th>15</th><th>17</th></tr>
+      <tr><td>CPU</td><td>10-core</td><td>12-core</td><td>12-core</td></tr>
+      <tr><td>RAM max</td><td>32GB</td><td>64GB</td><td>64GB</td></tr>
+      <tr><td>Battery</td><td>63Wh</td><td>84Wh</td><td>99Wh</td></tr>
+      <tr><td>Ports</td><td>2×TB4</td><td>3×TB4 + HDMI</td><td>3×TB4 + HDMI + SD</td></tr>
+    </table>
+  </section>
+
+  <section data-morph="reviews">
+    <h2>Reviews</h2>
+    <blockquote>“Best keyboard in its class, and the thermals hold 5.0GHz sustained.” — laptopbench.io</blockquote>
+  </section>
+
+  <section data-morph="promo-banner">
+    <h2>🎁 Winter sale — up to 20% off</h2>
+  </section>
+
+  <footer data-morph="footer">MIT demo · <a href="https://github.com/Type-zero-labs/ui-morph">ui-morph</a></footer>
+
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

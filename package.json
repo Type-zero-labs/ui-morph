@@ -1,0 +1,48 @@
+{
+  "name": "ui-morph",
+  "version": "0.1.0",
+  "description": "Persona-driven generative UI mutations for existing websites — consent-first, page-boundary only, constrained to your design system. The LLM compiles itself out of the runtime.",
+  "keywords": [
+    "generative-ui",
+    "personalization",
+    "adaptive-ui",
+    "llm",
+    "design-system",
+    "ab-testing"
+  ],
+  "license": "MIT",
+  "author": "Mauricio Juba <jubahhh@gmail.com> (https://mauriciojuba.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Type-zero-labs/ui-morph.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc --noEmit",
+    "demo": "vite demo",
+    "demo:build": "vite build demo",
+    "test": "node --test --experimental-strip-types test/*.test.ts"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}

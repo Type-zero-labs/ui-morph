@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NOVA Laptops — ui-morph demo</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav data-morph="nav">
+    <strong>NOVA</strong>
+    <span><a href="/index.html">HOME</a> <a href="/products.html">LAPTOPS</a></span>
+  </nav>
+
+  <header data-morph="hero">
+    <div data-morph-variant="visual">
+      <h1>Machines that feel like magic.</h1>
+      <p>Thin. Silent. Beautiful. The laptop you'll want on your desk.</p>
+    </div>
+    <div data-morph-variant="technical" hidden>
+      <h1>64GB LPDDR5X · 12-core · 99Wh</h1>
+      <p>Full spec sheets, thermal curves and benchmark data. No marketing adjectives.</p>
+    </div>
+    <a class="cta" data-morph="cta-hero" href="/products.html">SEE THE LINEUP</a>
+  </header>
+
+  <section data-morph="testimonials">
+    <h2>Loved by people like you</h2>
+    <blockquote>“I stopped thinking about my machine. It just disappears.” — Ana, designer</blockquote>
+  </section>
+
+  <section data-morph="specs-teaser">
+    <h2>Under the hood</h2>
+    <table>
+      <tr><td>CPU</td><td>12-core, 5.1GHz boost</td></tr>
+      <tr><td>Memory</td><td>up to 64GB LPDDR5X</td></tr>
+      <tr><td>Battery</td><td>99Wh · 18h real-world</td></tr>
+    </table>
+  </section>
+
+  <section data-morph="promo-banner">
+    <h2>🎁 Winter sale — up to 20% off</h2>
+  </section>
+
+  <footer data-morph="footer">MIT demo · <a href="https://github.com/Type-zero-labs/ui-morph">ui-morph</a></footer>
+
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

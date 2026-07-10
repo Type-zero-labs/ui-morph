@@ -1,0 +1,41 @@
+/* NOVA demo store — deliberately plain, so the morphs are what you notice. */
+* { box-sizing: border-box; margin: 0; }
+body { font: 16px/1.6 system-ui, sans-serif; background: #0b0b0e; color: #e8e8ec; padding-bottom: 40vh; }
+a { color: inherit; }
+nav { display: flex; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid #26262c; }
+nav a { margin-left: 16px; text-decoration: none; font-size: 13px; letter-spacing: .08em; }
+header { padding: 64px 24px; max-width: 860px; margin: 0 auto; }
+header h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; }
+header p { margin-top: 12px; color: #9a9aa4; }
+section { max-width: 860px; margin: 0 auto; padding: 32px 24px; border-top: 1px solid #1b1b20; }
+section h2 { font-size: 1.1rem; margin-bottom: 12px; }
+blockquote { color: #9a9aa4; font-style: italic; }
+table { border-collapse: collapse; width: 100%; }
+td, th { border: 1px solid #26262c; padding: 8px 12px; text-align: left; font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.grid article { border: 1px solid #26262c; border-radius: 10px; padding: 20px; }
+.cta { display: inline-block; margin-top: 12px; padding: 10px 22px; background: #c3fffc; color: #0b0b0e; text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: .06em; border-radius: 8px; }
+footer { max-width: 860px; margin: 0 auto; padding: 32px 24px; color: #55555e; font-size: 13px; }
+
+/* emphasis levels the engine can apply */
+[data-morph-emphasis="subtle"] { outline: 1px solid #c3fffc55; outline-offset: 6px; border-radius: 10px; }
+[data-morph-emphasis="strong"] { outline: 2px solid #c3fffc; outline-offset: 8px; border-radius: 10px; box-shadow: 0 0 40px #c3fffc22; }
+
+/* ── consent banner ── */
+#morph-consent { position: fixed; inset: auto 16px 16px 16px; max-width: 520px; margin: 0 auto; background: #141419; border: 1px solid #2e2e36; border-radius: 12px; padding: 18px; z-index: 50; }
+#morph-consent p { font-size: 13px; color: #b8b8c0; }
+#morph-consent .row { display: flex; gap: 8px; margin-top: 12px; }
+#morph-consent button { padding: 8px 18px; border-radius: 8px; border: 1px solid #2e2e36; background: none; color: #e8e8ec; cursor: pointer; font-size: 13px; }
+#morph-consent button.yes { background: #c3fffc; color: #0b0b0e; border: none; font-weight: 700; }
+
+/* ── HUD ── */
+#morph-hud { position: fixed; right: 16px; top: 16px; width: 340px; max-height: 80vh; overflow: auto; background: #101014ee; border: 1px solid #2e2e36; border-radius: 12px; font: 11px/1.5 ui-monospace, monospace; z-index: 40; backdrop-filter: blur(6px); }
+#morph-hud h4 { padding: 10px 14px; border-bottom: 1px solid #26262c; font-size: 11px; letter-spacing: .1em; color: #c3fffc; }
+#morph-hud .block { padding: 10px 14px; border-bottom: 1px solid #1b1b20; }
+#morph-hud .k { color: #71717c; text-transform: uppercase; letter-spacing: .08em; }
+#morph-hud .v { color: #e8e8ec; }
+#morph-hud .log { display: block; padding: 2px 0; color: #9a9aa4; word-break: break-all; }
+#morph-hud .log.op-applied { color: #7ee2b8; }
+#morph-hud .log.op-rejected { color: #f38ba8; }
+#morph-hud .log.chain-hit { color: #c3fffc; }
+#morph-hud .log.chain-compiled { color: #f9e2af; }
